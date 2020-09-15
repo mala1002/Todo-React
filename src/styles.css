@@ -1,4 +1,65 @@
-.App {
-  font-family: sans-serif;
-  text-align: center;
+body,
+html {
+	font-family: Verdana;
+}
+
+form {
+	text-align: center;
+	display: flex;
+	flex-direction: row;
+	align-content: stretch;
+	justify-content: center;
+	margin-top: 60px;
+}
+
+input {
+	padding: 10px 20px;
+	font-size: 22px;
+	border: 2px solid #cd6133;
+	outline: none;
+	transition: 0.25s ease-in-out;
+}
+
+input:focus {
+	box-shadow: 0 0 20px 5px rgba(255, 121, 63, 0.4);
+}
+
+button {
+	padding: 10px 20px;
+	font-size: 22px;
+	background-color: #fff;
+	border: 2px solid#cd6133;
+	border-left: none;
+	transition: 0.25s ease-in-out;
+	outline: none;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #ff793f;
+	color: #fff;
+}
+
+.list {
+	text-align: center;
+	margin-top: 40px;
+}
+
+.item {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	border: 2px solid#cd6133;
+	align-items: center;
+	padding-left: 20px;
+	margin-bottom: 20px;
+}
+
+.item button {
+	border: none;
+	border-left: 2px solid transparent;
+}
+
+.item button:hover {
+	border-left: 2px solid#cd6133;
 }
