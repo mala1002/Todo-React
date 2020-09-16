@@ -26,8 +26,20 @@ class App extends Component {
 		});
 	};
 
+	handleRemove = (e) => {
+		const { todos } = this.state;
+		const value = e.target.dataset.value;
+		const index = todos.indexOf(value);
+
+		todos.splice(index, 1);
+
+		this.setState({
+			todos
+		});
+	};
+
 	render() {
-		const { enteredText } = this.state;
+		const { todos, enteredText } = this.state;
 
 		return (
 			<Fragment>
@@ -37,8 +49,14 @@ class App extends Component {
 					enteredText={enteredText}
 				/>
 				<Todos>
-					<Todo index="1" name="Some task" />
-					<Todo index="2" name="Some task number two" />
+					{todos.map((todo, index) => (
+						<Todo
+							index={index + 1}
+							name={todo}
+							key={index}
+							handleRemove={this.handleRemove}
+						/>
+					))}
 				</Todos>
 			</Fragment>
 		);

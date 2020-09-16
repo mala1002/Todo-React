@@ -7,6 +7,7 @@ const SearchBar = (props) => {
 				placeholder="Add some tasks"
 				onChange={props.handleChange}
 				value={props.enteredText}
+				required
 			/>
 			<button>+</button>
 		</form>

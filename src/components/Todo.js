@@ -3,10 +3,12 @@ import React from "react";
 const Todo = (props) => {
 	return (
 		<div className="item">
-			<span>
-				{props.index}. {props.name}
-			</span>
-			<button>X</button>
+			<p>
+				{props.index}.<span>{props.name}</span>
+			</p>
+			<button onClick={props.handleRemove} data-value={props.name}>
+				&times;
+			</button>
 		</div>
 	);
 };

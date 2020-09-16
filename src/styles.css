@@ -63,3 +63,8 @@ button:hover {
 .item button:hover {
 	border-left: 2px solid#cd6133;
 }
+
+p {
+	padding: 0;
+	margin: 0;
+}
