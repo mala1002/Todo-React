@@ -3,10 +3,11 @@ import "./styles.css";
 import SearchBar from "./components/SearchBar";
 import Todos from "./components/Todos";
 import Todo from "./components/Todo";
+import { tasks, deleteTodo } from "./helpers";
 
 class App extends Component {
 	state = {
-		todos: [],
+		todos: tasks,
 		enteredText: ""
 	};
 
@@ -29,12 +30,9 @@ class App extends Component {
 	handleRemove = (e) => {
 		const { todos } = this.state;
 		const value = e.target.dataset.value;
-		const index = todos.indexOf(value);
-
-		todos.splice(index, 1);
 
 		this.setState({
-			todos
+			todos: deleteTodo(todos, value)
 		});
 	};
 

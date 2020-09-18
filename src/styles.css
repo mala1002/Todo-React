@@ -40,9 +40,17 @@ button:hover {
 	color: #fff;
 }
 
+button:focus {
+	box-shadow: 0 0 20px 5px rgba(255, 121, 63, 0.4);
+	background-color: #ff793f;
+	color: #fff;
+}
+
 .list {
+	margin: 0 auto;
 	text-align: center;
 	margin-top: 40px;
+	max-width: 60%;
 }
 
 .item {
